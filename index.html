@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>I LOVE YOU</title>
+    <link rel="icon" type="image/x-icon" href="images/heart.ico">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="generateHearts()">
+    <div id="page-container">
+        <div id="heart-container"></div>
+        <div id="blur"></div>
+        <div id="envelope-container" class="envelope">
+            <div id="letter">
+                <img src="images/paper texture.jpg">
+            </div>
+            <div id="envelope-body" class="envelope">
+                <svg width="700" height="500">
+                    <polygon class="envelope-body" points="0, 0, 350, 250, 0, 500" fill="#FFDBB5" />
+                    <polygon class="envelope-body" points="700, 0, 350, 250, 700, 500" fill="#FFDBB5" />
+                    <polygon class="envelope-body" points="0, 500, 350, 225, 700, 500" fill="#ffeac5">
+                </svg>
+            </div>
+            <div id="envelope-top" class="envelope">
+                <svg width="100%" height="100%">
+                    <polygon id="envelope-top-polygon" points="0, 300, 700, 300, 350, 600" fill="#ccbb9d" />
+                </svg>
+            </div>
+            <div id="seal" class="envelope">
+                <img src="images/wax seal.svg">
+            </div>
+        </div>
+        <div id="popup">
+            <div id="popup-blur"></div>
+            <div id="popup-body">
+                <h1>CONGRATULATIONS!</h1>
+                <h3 style="margin-bottom: 0;">Valentine is officially your Valentine</h3>
+                <h3 style="margin-bottom: 0;">Now go collect your boyfriend</h3>
+                <h3 style="margin-bottom: 0;">(I love you so much)</h3>
+                <img id="fingerprint" src="images/fingerprint.svg">
+                <label for="fingerprint" id="f-label">(Fingerprint proof we are married)</label>
+                <img id="badge" src="images/badge.svg">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>

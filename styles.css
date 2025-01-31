@@ -1,0 +1,282 @@
+html, body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+#page-container{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heart-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: drop-shadow( 7px 7px 1px #0000002a);
+}
+
+#blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background-color: none;
+}
+
+#envelope-container{
+    scale: 0.75;
+    position: relative;
+    margin-top: 200px;
+    width: 700px;
+    height: 500px;
+    filter: drop-shadow(30px 30px 4px #0000004b);
+}
+
+#envelope-body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#envelope-body polygon {
+    pointer-events: auto;
+}
+
+#envelope-top{
+    position: absolute;
+    top: -300px;
+    width: 100%;
+    height: 600px;
+    z-index: 2;
+}
+
+#seal img{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 210px;
+    left: 280px;
+    z-index: 2;
+}
+
+#letter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#letter img{
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+}
+
+.heart{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.heart img{
+    width: 50px;
+    height: 50px;
+}
+
+@font-face {
+    font-family: "Fancy Text";
+    src: url("fonts/perfecto-calligraphy-personal-use.regular.ttf");
+}
+
+@font-face {
+    font-family: "Less Fancy Text";
+    src: url("fonts/AutumnFlowers-9YVZK.otf");
+}
+
+.letter_content{
+    position: absolute;
+}
+
+#beginning{
+    top: 0px;
+    left: 20px;
+    font-size: 60pt;
+    font-weight: bold;
+    font-family: "Fancy Text";
+}
+
+#text{
+    top: 100px;
+    left: 10%;
+    right: 15%;
+    font-size: 15pt;
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+}
+
+#yes-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70px;
+    height: auto;
+    top: 400px;
+    left: 30%;
+}
+
+#yes{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#yes:checked::before{
+    content: "❤️";
+    font-size: 30pt;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#no-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70px;
+    height: auto;
+    top: 400px;
+    right: 30%;
+}
+
+#no{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#no:checked::before{
+    content: "";
+    font-size: 30pt;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#submit{
+    top: 80%;
+    left: calc(50% - 100px);
+    width:200px;
+    height: 100px;
+    border-radius: 20px;
+    font-size: 30pt;
+    font-family: "Less Fancy Text";
+    background-color: pink;
+}
+
+#submit:hover{
+    background-color: rgb(235, 149, 164);
+}
+
+
+#popup-blur{
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 105, 180, 0.3);
+}
+
+#popup-body{
+    z-index: 5;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    border-radius: 20px;
+    border: solid;
+    border-color: black;
+    border-width: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 152, 203, 0.692);
+    overflow: hidden;
+    filter: drop-shadow( 7px 7px 1px #0000002a);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#popup-body > img{
+    position: absolute;
+    z-index: 6;
+}
+
+#fingerprint{
+    scale: 0.04;
+    top: -1075px;
+    left: -900px;
+    rotate: -15deg;
+}
+
+#badge{
+    scale: 0.2;
+    top:-120px;
+    left: -200px;
+    rotate: 15deg;
+}
+
+li {
+    margin-left: 20px;
+}
+  
+ul {
+    padding: 20px;
+    background: #ff9999;
+    width: 100%;
+}
+
+#f-label{
+    z-index: 7;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+}
